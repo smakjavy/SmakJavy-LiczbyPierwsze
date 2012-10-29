@@ -13,10 +13,10 @@ public class liczbyPierwsze {
 	/**
 	 * @param args
 	 */
+	
+	// Program zapisuj¹cy liczby pierwsze do tablicy liczb pierwszych
+	
 	public static void main(String[] args) {
-		// Program zapisuj¹cy liczby pierwsze do tablicy liczb pierwszych
-
-		System.out.println("Import projektu z b³êdami ");
 		
 		Stoper mierzCzas = new Stoper();
 		Stoper mierzCzas1 = new Stoper();
