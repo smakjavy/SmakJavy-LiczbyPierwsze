@@ -2,7 +2,7 @@ package Nauka;
 
 public class liczbyPierwsze {
 
-	final static int MAX_LICZBA_PIERWSZA=50000;
+	final static int MAX_LICZBA_PIERWSZA=10000;
 	
 	/**
 	 * @param args
@@ -10,6 +10,8 @@ public class liczbyPierwsze {
 	public static void main(String[] args) {
 		// Program zapisuj¹cy liczby pierwsze do tablicy liczb pierwszych
 
+		System.out.println("Import projektu z b³êdami ");
+		
 		Stoper mierzCzas = new Stoper();
 		Stoper mierzCzas1 = new Stoper();
 		mierzCzas.zeruj();
