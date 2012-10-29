@@ -32,9 +32,9 @@ public class liczbyPierwsze {
 				int p = 2;
 				while (i > p) {
 					wynik = i % p;
-					if (wynik != 0)
+					if (wynik != 0){
 						p++;
-					else
+					} else
 						p = i + 1;
 				}
 				if (p != i + 1) {
