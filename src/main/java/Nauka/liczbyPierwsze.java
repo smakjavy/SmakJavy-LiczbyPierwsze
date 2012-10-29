@@ -1,5 +1,11 @@
 package Nauka;
 
+/**
+ * 
+ * @author MC
+ *
+ */
+
 public class liczbyPierwsze {
 
 	final static int MAX_LICZBA_PIERWSZA=10000;
