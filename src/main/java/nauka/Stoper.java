@@ -1,9 +1,8 @@
-package Nauka;
+package nauka;
 
 public class Stoper {
-
+	
 	long start, stop;
-	double wynik;
 
 	void start() {
 		start = System.currentTimeMillis();
