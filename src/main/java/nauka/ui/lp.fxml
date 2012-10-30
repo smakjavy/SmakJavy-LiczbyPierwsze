@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="nauka.ui.Controller">
+  <children>
+    <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liczby Pierwsze">
+      <font>
+        <Font name="System Bold Italic" size="24.0" />
+      </font>
+    </Text>
+    <Separator layoutX="15.0" layoutY="47.0" prefWidth="571.0" />
+    <ChoiceBox fx:id="choiceBox" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="-Wybierz algorytm-" />
+          <String fx:value="Algorytm podstawowy" />
+          <String fx:value="Alogtytm sita" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Pane fx:id="pane" prefHeight="304.0" prefWidth="571.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0" />
+    <Button layoutX="235.0" mnemonicParsing="false" onAction="#handleButtonAction" text="licz" AnchorPane.bottomAnchor="21.0" />
+    <ProgressIndicator layoutX="313.0" progress="0.0" AnchorPane.bottomAnchor="12.0" />
+  </children>
+</AnchorPane>
