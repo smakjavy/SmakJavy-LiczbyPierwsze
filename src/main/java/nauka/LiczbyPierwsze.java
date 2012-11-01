@@ -52,7 +52,8 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 		//mierzCzas.zeruj();
 		//mierzCzas.start();
 		LiczbyPierwsze dajCzas = new LiczbyPierwsze();
-		long start = dajCzas.dajCzasLiczenia();
+		long start = 0;
+		start = dajCzas.dajCzasLiczenia();
 		LiczbyPierwsze tab = new LiczbyPierwsze();
 
 		System.out.println("Liczby pierwsze do " +MAX);
