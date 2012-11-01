@@ -1,6 +1,6 @@
 package nauka;
 
-import nauka.Stoper;
+//import nauka.Stoper;
 
 /**
  * 
@@ -45,23 +45,22 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 		return System.currentTimeMillis();
 	}
 	
-	/**
-	 * @param args
-	 */
 	
 	public static void main(String[] args) {
 			
-		Stoper mierzCzas = new Stoper();
-		mierzCzas.zeruj();
-		mierzCzas.start();
-		LiczbyPierwsze tab = new LiczbyPierwsze();
+		//Stoper mierzCzas = new Stoper();
+		//mierzCzas.zeruj();
+		//mierzCzas.start();
 		LiczbyPierwsze dajCzas = new LiczbyPierwsze();
+		long start = dajCzas.dajCzasLiczenia();
+		LiczbyPierwsze tab = new LiczbyPierwsze();
+
 		System.out.println("Liczby pierwsze do " +MAX);
 		tab.liczLiczbyPierwsze(MAX);
 		System.out.println("\n");
 		dajCzas.dajCzasLiczenia();
         		
-		System.out.println("Czas wykonania operacji wynosi:" +(dajCzas.dajCzasLiczenia()- mierzCzas.start));	
+		System.out.println("Czas wykonania operacji wynosi:" +(dajCzas.dajCzasLiczenia()- start));	
 	}		
 }
 
