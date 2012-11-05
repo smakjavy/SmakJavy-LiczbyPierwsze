@@ -10,7 +10,7 @@ public interface LicznikLiczbPierwszych {
 	 */
 	
 	public int[] liczLiczbyPierwsze(int max);
-	int MAX=100000;
+	int MAX=10000;
 	/**
 	 * podaje czas liczenia
 	 * @return czas liczenia w milisekundach
