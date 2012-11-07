@@ -13,7 +13,7 @@
   <children>
     <BorderPane prefHeight="372.0" prefWidth="572.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
       <bottom>
-        <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !">
+        <Button mnemonicParsing="false" text="Licz !">
           <graphic>
             <ComboBox>
               <items>

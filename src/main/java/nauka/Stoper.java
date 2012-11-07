@@ -17,6 +17,10 @@ public class Stoper {
 	}
 
 	void podajCzas() {
-		System.out.println("czas operacji wynosi: " + (stop - start));
+		System.out.println("czas operacji wynosi: " + dajCzas());
+	}
+	
+	long dajCzas() {
+		return stop - start;
 	}
 }

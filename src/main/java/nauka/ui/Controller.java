@@ -1,30 +1,47 @@
 package nauka.ui;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import nauka.Licz;
+import nauka.Sito;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 
-public class Controller {
+public class Controller implements Initializable{
 
 	@FXML
-	private ChoiceBox<String> choiceBox;
+	Pane pane;
 	
-	@FXML
-	private Pane pane;
-	
-	public Controller(){
-		System.out.println(choiceBox);
-	}
 	
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        Canvas canvas = new Canvas(1000,1000);
-        System.out.println(pane.getChildren().add(canvas));
-        canvas.getGraphicsContext2D().fillOval(10, 10, 1000, 1000);
+    	Canvas c=new Canvas();
+    	pane.getChildren().add(c);
+    	c.setWidth(pane.getWidth());
+    	c.setHeight(pane.getHeight());
+    	
+
+    	Licz l=new Licz();
+    	int li[]=l.licz((int)c.getWidth()*5);
+    	
+    	for(int i=0; i<c.getWidth(); i++){
+    		c.getGraphicsContext2D().fillOval(i, li[i]/10, 2,2);	
+    	}
+    	
+    	
     }
+
+	public void initialize(URL url, ResourceBundle rb) {
+		System.out.println(url);
+	}
     
 
 }

@@ -18,13 +18,15 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 	 w interfejsie LicznikLiczbPierwszych
 	 * metoda sprawdza ka¿d¹ liczbê czy jest podzielne bez reszty przez kolejne dzielniki (p) 
 	 */
-	public long dajCzas;
+	
+	private Stoper stoper = new Stoper();
+	
 	public int[] liczLiczbyPierwsze(int MAX){
 	 	
 		//
-		Stoper mierzCzas = new Stoper();
-	    mierzCzas.zeruj();
-	    mierzCzas.start();
+		
+	    stoper.zeruj();
+	    stoper.start();
 		//deklaracja zmiennych pomocniczych i tablicy, w której bêd¹ przechowywane liczby pierwsze
 		int i, j = 0, wynik, tabPierwszych[] = new int[MAX];
 		
@@ -78,13 +80,11 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 				System.out.print(tabPierwszych[i] + ", ");
 			}
 		}
-		mierzCzas.stop();
-		this.dajCzas=mierzCzas.stop-mierzCzas.start;
-		
+		stoper.stop();
         return tabPierwszych;
 	}
 	
 	public long dajCzasLiczenia(){	
-		return this.dajCzas;
+		return stoper.dajCzas();
 	}
 }
