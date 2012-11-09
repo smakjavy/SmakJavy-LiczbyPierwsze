@@ -3,6 +3,7 @@ package nauka;
 /*
  * Klasa uruchomieniowa dla klas LiczbyPierwsze i Sito
  * ma za zadanie wyœwietliæ wyniki z metod liczLiczbypierwsze i dajCzasLiczenia
+ * oblicza czas od pocz¹tku uruchomienia klasy Uruchamiacz do koñca
  */
 public class Uruchamiacz {
 	public static void main(String[] args) {
