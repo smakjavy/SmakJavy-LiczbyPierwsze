@@ -5,7 +5,6 @@ package nauka;
 
 /**
  * 
- * 
  * @author MC
  *
  */

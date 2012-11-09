@@ -1,5 +1,9 @@
 package nauka;
 
+/*
+ * Klasa uruchomieniowa dla klas LiczbyPierwsze i Sito
+ * ma za zadanie wyœwietliæ wyniki z metod liczLiczbypierwsze i dajCzasLiczenia
+ */
 public class Uruchamiacz {
 	public static void main(String[] args) {
 		
