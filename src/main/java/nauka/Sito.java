@@ -25,24 +25,19 @@ public class Sito implements LicznikLiczbPierwszych {
 		 */
 		private Stoper stoper = new Stoper();
 		
-		//deklaracja zmiennej pomocniczej oraz deklaracja i zainicjowanie tablicy liczb pierwszych 
-                //TODO - ile wynosi max dowiemy siê dopiero po uruchomieniu metody liczLiczbyPierwsze
-                //TODO - lepiej przeniœæ t¹ zmienn¹ do tej metody
-		private int i, tabPierwszych[] = new int[MAX];
+		//deklaracja zmiennej pomocniczej
+		private int i;
 		
 		//deklaracja zmiennej pierwiastek
 		private double pierwiastek;
 	 	
-	 	
-	 	//deklaracja i stworzenie tablicy do wyszukiwania wielokrotnoœci zmiennej i      
-                //TODO - ile wynosi max dowiemy siê dopiero po uruchomieniu metody liczLiczbyPierwsze
-                //TODO - lepiej przeniœæ t¹ zmienn¹ do tej metody
-		private boolean tabSito[] = new boolean[MAX+ 1];
-	 	
-                
-                //TODO - zmienne nale¿y nazywaæ ma³ymi literami
-		public int[] liczLiczbyPierwsze(int MAX){
+		public int[] liczLiczbyPierwsze(int max){
 			
+			//deklaracja tablicy liczb pierwszych
+			int tabPierwszych[] = new int[max];
+			
+			//deklaracja i stworzenie tablicy do wyszukiwania wielokrotnoœci zmiennej i 
+			boolean tabSito[] = new boolean[max+ 1];
 			/*
 			 * wyzerowanie stopera
 			 * uruchomienie stopera
@@ -50,10 +45,10 @@ public class Sito implements LicznikLiczbPierwszych {
 			stoper.zeruj();
 			stoper.start();
 				 	
-		 	/*obliczenie pierwiastka dla zmiennej (MAX) zadeklarowananej w interfejsie LicznikLiczbPierwszych z 
-		 	 * wykorzystaniem funkcji matematycznej
+		 	/*obliczenie pierwiastka dla zmiennej (max) zadeklarowananej w interfejsie LicznikLiczbPierwszych z 
+		 	 *wykorzystaniem funkcji matematycznej
 		 	 */
-		 	pierwiastek = Math.sqrt(MAX);
+		 	pierwiastek = Math.sqrt(max);
 
 		 	/*
 		 	 * pêtla typu for dzia³a od i = 2 do pierwiastka z MAX
@@ -69,7 +64,7 @@ public class Sito implements LicznikLiczbPierwszych {
 		 		 * pêtla typu for ma za zadanie podstawiæ wartoœæ true do tablicy typu boolean
 		 		 * wszystkich wielokrotnoœci zmiennej i dla mno¿nika j a nastêpnie zwiêkszyæ mno¿nik j o 1 
 		 		 */
-		 		for (int j = 2 * i ; j <= MAX; j += i){ 			
+		 		for (int j = 2 * i ; j <= max; j += i){ 			
 		 				tabSito[j] = true;          
 		 		}
 		 	}	
@@ -80,7 +75,7 @@ public class Sito implements LicznikLiczbPierwszych {
 	 		 * je¿eli nie sprawdza czy wartoœæ tablicy typu boolean jest równa false
 	 		 * je¿eli tak podstawia pod kolejny element tablicy liczb pierwszych 
 	 		 */
-		 	for (i = 0; i <= MAX; i++){
+		 	for (i = 0; i <= max; i++){
 		 		if (i == 1){
 		 			tabPierwszych[i] = i;
 		 		} else 
@@ -109,7 +104,6 @@ public class Sito implements LicznikLiczbPierwszych {
 		
 		/*
 		 * Metoda s³u¿¹ca do zwrócenia czasu liczenia w milisekundach
-		 * NIE DZIA£A 
 		 */
 		public long dajCzasLiczenia(){	
 			return stoper.dajCzas();

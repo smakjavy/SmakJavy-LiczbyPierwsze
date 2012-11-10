@@ -24,11 +24,14 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 		private Stoper stoper = new Stoper();
 		
 		//deklaracja zmiennych pomocniczych i tablicy, w której bêd¹ przechowywane liczby pierwsze
-		private int i, j = 0, wynik, p, tabPierwszych[] = new int[MAX];
+		private int i, j = 0, wynik, p;
 		
 		
-		public int[] liczLiczbyPierwsze(int MAX){
-		
+		public int[] liczLiczbyPierwsze(int max){
+			
+			//deklaracja tablicy, w której bêd¹ przechowywane liczby pierwsze
+			int tabPierwszych[] = new int[max];
+			
 			/*
 			 * wyzerowanie stopera
 			 * uruchomienie stopera
@@ -39,7 +42,7 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 			/*
 			 * Pêtla dzia³a od 0 do liczby MAX zadeklarowanej w interfejsie LicznikLiczbPierwszych
 			 */
-			for (i = 0; i < MAX; i++) {
+			for (i = 0; i < max; i++) {
 				
 				/* 
 				 * Warunek sprawdza czy zmienna i=1 
@@ -53,7 +56,7 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 				} else {
 					p=2;
 					/*
-					 * Pêtla wykonuje siê dla zmiennej i wiêksze od zmiennej p
+					 * Pêtla wykonuje siê dla zmiennej i > p
 					 * dzieli modulo zmienn¹ i przez dzielnik p i podstawia pod zmienn¹ wynik
 					 */
 					while (i > p) {
@@ -100,7 +103,6 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 		}
 		/*
 		 * Metoda s³u¿¹ca do zwrócenia czasu liczenia w milisekundach
-		 * NIE DZIA£A 
 		 */
 		public long dajCzasLiczenia(){	
 			return stoper.dajCzas();
