@@ -7,10 +7,6 @@ package nauka;
  */
 public class Uruchamiacz {
 	public static void main(String[] args) {
-		
-	Stoper stoper = new Stoper();
-	stoper.zeruj();
-	stoper.start();
 
 	LiczbyPierwsze tab = new LiczbyPierwsze();
 		
@@ -31,7 +27,5 @@ public class Uruchamiacz {
 		System.out.println("Czas liczenia wynosi " + tabSito.dajCzasLiczenia());
 		System.out.println("\n");
 		
-	stoper.stop();	
-	stoper.podajCzas();	
 	}	
 }
