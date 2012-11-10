@@ -1,8 +1,7 @@
 
 package nauka;
 
-public interface LicznikLiczbPierwszych {
-	
+public interface LicznikLiczbPierwszych {	
 	/**
 	 * liczy liczby pierwsze
 	 * @param max maksymalna liczba, dla której odbedzie sie liczenie czy jest pierwsza
@@ -10,7 +9,7 @@ public interface LicznikLiczbPierwszych {
 	 */
 	
 	public int[] liczLiczbyPierwsze(int max);
-	int MAX=10000;
+
 	/**
 	 * podaje czas liczenia
 	 * @return czas liczenia w milisekundach

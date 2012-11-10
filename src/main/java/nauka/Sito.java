@@ -26,6 +26,8 @@ public class Sito implements LicznikLiczbPierwszych {
 		private Stoper stoper = new Stoper();
 		
 		//deklaracja zmiennej pomocniczej oraz deklaracja i zainicjowanie tablicy liczb pierwszych 
+                //TODO - ile wynosi max dowiemy siê dopiero po uruchomieniu metody liczLiczbyPierwsze
+                //TODO - lepiej przeniœæ t¹ zmienn¹ do tej metody
 		private int i, tabPierwszych[] = new int[MAX];
 		
 		//deklaracja zmiennej pierwiastek
@@ -33,8 +35,12 @@ public class Sito implements LicznikLiczbPierwszych {
 	 	
 	 	
 	 	//deklaracja i stworzenie tablicy do wyszukiwania wielokrotnoœci zmiennej i      
+                //TODO - ile wynosi max dowiemy siê dopiero po uruchomieniu metody liczLiczbyPierwsze
+                //TODO - lepiej przeniœæ t¹ zmienn¹ do tej metody
 		private boolean tabSito[] = new boolean[MAX+ 1];
 	 	
+                
+                //TODO - zmienne nale¿y nazywaæ ma³ymi literami
 		public int[] liczLiczbyPierwsze(int MAX){
 			
 			/*
