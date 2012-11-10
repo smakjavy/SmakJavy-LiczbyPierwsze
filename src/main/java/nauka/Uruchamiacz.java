@@ -10,19 +10,19 @@ public class Uruchamiacz {
 
 	LiczbyPierwsze tab = new LiczbyPierwsze();
 		
-		int max=500000;
+		int max=100000;
 		
         System.out.println("Liczby pierwsze do " + max +" zwrócone za pomoc¹ klasy LiczbyPierwsze:");
 		tab.liczLiczbyPierwsze(max);
 		System.out.println("\n");
-		System.out.println("Czas liczenia wynosi " + tab.dajCzasLiczenia());
+		System.out.println("Czas liczenia wynosi: " + tab.dajCzasLiczenia());
 		System.out.println("\n");
 		
 		Sito tabSito = new Sito();
 		System.out.println("Liczby pierwsze do " + max +" zwrócone za pomoc¹ klasy Sito:");
 		tabSito.liczLiczbyPierwsze(max);
 		System.out.println("\n");
-		System.out.println("Czas liczenia wynosi " + tabSito.dajCzasLiczenia());
+		System.out.println("Czas liczenia wynosi: " + tabSito.dajCzasLiczenia());
 		System.out.println("\n");
 		
 	}	
