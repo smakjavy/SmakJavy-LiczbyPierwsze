@@ -15,14 +15,7 @@
       <bottom>
         <HBox prefHeight="26.0" prefWidth="665.0">
           <children>
-            <ComboBox>
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Sito" />
-                  <String fx:value="Podstawowy" />
-                </FXCollections>
-              </items>
-            </ComboBox>
+            <ComboBox fx:id="comboBox"/>
             <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !" />
             <ProgressBar prefWidth="200.0" progress="0.0" />
           </children>
@@ -33,7 +26,7 @@
           <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
               <children>
-                <ListView prefHeight="336.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <ListView fx:id="listView" prefHeight="336.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
               </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">

@@ -3,6 +3,7 @@ package nauka.ui;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 import java.util.ResourceBundle;
 
 import nauka.Licz;
@@ -15,6 +16,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
@@ -22,7 +24,8 @@ import nauka.LiczbyPierwsze;
 import nauka.LicznikLiczbPierwszych;
 
 public class Controller implements Initializable{
-
+        @FXML
+        private TextField textField;
 	@FXML
 	private Pane pane;
         
@@ -45,9 +48,10 @@ public class Controller implements Initializable{
     	c.setHeight(pane.getHeight());
     	
     	LicznikLiczbPierwszych l=mapaMetod.get(metoda);
-        l.liczLiczbyPierwsze((int)c.getWidth()*5);
+        int max=Integer.parseInt(textField.getText());
+        l.liczLiczbyPierwsze(max);
     	int li[]=l.liczLiczbyPierwsze((int)c.getWidth()*5);
-        listView.getItems().add("czas liczenia:"+l.dajCzasLiczenia());
+        listView.getItems().add("czas liczenia:"+l.dajCzasLiczenia()+" ms");
     	
     	for(int i=0; i<c.getWidth(); i++){
     		c.getGraphicsContext2D().fillOval(i, li[i]/10, 2,2);	

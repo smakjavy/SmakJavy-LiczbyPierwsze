@@ -13,11 +13,19 @@
   <children>
     <BorderPane prefHeight="380.0" prefWidth="665.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="25.0">
       <bottom>
-        <HBox prefHeight="26.0" prefWidth="665.0">
+        <HBox prefHeight="29.0" prefWidth="665.0">
           <children>
-            <ComboBox fx:id="comboBox"/>
-            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !" />
             <ProgressBar prefWidth="200.0" progress="0.0" />
+            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !">
+              <graphic>
+                <HBox minHeight="16.0" prefHeight="21.0" prefWidth="200.0">
+                  <children>
+                    <ComboBox fx:id="comboBox" />
+                    <TextField fx:id="textField" prefWidth="96.0" promptText="Max" />
+                  </children>
+                </HBox>
+              </graphic>
+            </Button>
           </children>
         </HBox>
       </bottom>
