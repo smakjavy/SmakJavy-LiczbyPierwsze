@@ -1,6 +1,8 @@
 package nauka.ui;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.ResourceBundle;
 
 import nauka.Licz;
@@ -11,26 +13,41 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import nauka.LiczbyPierwsze;
+import nauka.LicznikLiczbPierwszych;
 
 public class Controller implements Initializable{
 
 	@FXML
-	Pane pane;
+	private Pane pane;
+        
+        @FXML
+        private ComboBox<String> comboBox;
+        
+        @FXML
+        private ListView<String> listView;
 	
-	
+	private HashMap<String,LicznikLiczbPierwszych>mapaMetod=new HashMap<String,LicznikLiczbPierwszych>();
+        
     @FXML
     private void handleButtonAction(ActionEvent event) {
+        String metoda = comboBox.getSelectionModel().getSelectedItem();
+        listView.getItems().add("metoda liczenia:"+metoda);
+           
     	Canvas c=new Canvas();
     	pane.getChildren().add(c);
     	c.setWidth(pane.getWidth());
     	c.setHeight(pane.getHeight());
     	
-
-    	Licz l=new Licz();
-    	int li[]=l.licz((int)c.getWidth()*5);
+    	LicznikLiczbPierwszych l=mapaMetod.get(metoda);
+        l.liczLiczbyPierwsze((int)c.getWidth()*5);
+    	int li[]=l.liczLiczbyPierwsze((int)c.getWidth()*5);
+        listView.getItems().add("czas liczenia:"+l.dajCzasLiczenia());
     	
     	for(int i=0; i<c.getWidth(); i++){
     		c.getGraphicsContext2D().fillOval(i, li[i]/10, 2,2);	
@@ -40,7 +57,9 @@ public class Controller implements Initializable{
     }
 
 	public void initialize(URL url, ResourceBundle rb) {
-		System.out.println(url);
+		mapaMetod.put("Sito", new Sito());
+                mapaMetod.put("Liczby", new LiczbyPierwsze());
+                comboBox.getItems().addAll(mapaMetod.keySet());
 	}
     
 

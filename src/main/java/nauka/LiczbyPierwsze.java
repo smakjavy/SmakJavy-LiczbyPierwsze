@@ -1,8 +1,5 @@
 package nauka;
 
-//import nauka.Stoper;
-
-
 /**
  * 
  * @author MC
