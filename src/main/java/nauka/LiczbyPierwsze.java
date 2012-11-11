@@ -19,15 +19,11 @@ public class LiczbyPierwsze implements LicznikLiczbPierwszych {
 		 * utworzenie obiektu Stoper
 		 */
 		private Stoper stoper = new Stoper();
-		
-		//deklaracja zmiennych pomocniczych i tablicy, w której bêd¹ przechowywane liczby pierwsze
-		private int i, j = 0, wynik, p;
-		
-		
+			
 		public int[] liczLiczbyPierwsze(int max){
 			
-			//deklaracja tablicy, w której bêd¹ przechowywane liczby pierwsze
-			int tabPierwszych[] = new int[max];
+			//deklaracja zmiennych pomocniczych oraz tablicy, w której bêd¹ przechowywane liczby pierwsze
+			int i, j = 0, wynik, p, tabPierwszych[] = new int[max];
 			
 			/*
 			 * wyzerowanie stopera

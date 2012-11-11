@@ -24,20 +24,14 @@ public class Sito implements LicznikLiczbPierwszych {
 		 * utworzenie obiektu Stoper
 		 */
 		private Stoper stoper = new Stoper();
-
-                
-                //TODO - dalczego ta zamienna jest w³aœnie tutaj ? czy bêdzie u¿ywana poza metod¹ liczLiczbyPierwsze ?
-		//deklaracja zmiennej pomocniczej
-		private int i;
-		
-                //TODO - dalczego ta zamienna jest w³aœnie tutaj ? czy bêdzie u¿ywana poza metod¹ liczLiczbyPierwsze ?
-		//deklaracja zmiennej pierwiastek
-		private double pierwiastek;
 	 	
 		public int[] liczLiczbyPierwsze(int max){
 			
-			//deklaracja tablicy liczb pierwszych
-			int tabPierwszych[] = new int[max];
+			//deklaracja zmiennej pomocniczej i oraz tablicy liczb pierwszych
+			int i, tabPierwszych[] = new int[max];
+			
+			//deklaracja zmiennej pierwiastek
+			double pierwiastek;
 			
 			//deklaracja i stworzenie tablicy do wyszukiwania wielokrotnoœci zmiennej i 
 			boolean tabSito[] = new boolean[max+ 1];
