@@ -5,6 +5,7 @@
 <?import javafx.collections.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
@@ -13,11 +14,55 @@
   <children>
     <BorderPane prefHeight="380.0" prefWidth="665.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="25.0">
       <bottom>
-        <HBox prefHeight="26.0" prefWidth="665.0">
+        <HBox prefHeight="29.0" prefWidth="665.0">
           <children>
-            <ComboBox fx:id="comboBox"/>
-            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !" />
-            <ProgressBar prefWidth="200.0" progress="0.0" />
+            <ProgressBar blendMode="GREEN" prefWidth="200.0" progress="0.0">
+              <effect>
+                <Bloom threshold="1.0">
+                  <input>
+                    <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant color="#dcccff" />
+                      </light>
+                    </Lighting>
+                  </input>
+                </Bloom>
+              </effect>
+            </ProgressBar>
+            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Licz !">
+              <effect>
+                <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#9766ff" />
+                  </light>
+                </Lighting>
+              </effect>
+              <graphic>
+                <HBox minHeight="16.0" prefHeight="21.0" prefWidth="200.0">
+                  <children>
+                    <ComboBox fx:id="comboBox" />
+                    <TextField fx:id="textField" prefWidth="96.0" promptText="Max">
+                      <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="6.349206349206349" surfaceScale="0.0">
+                          <bumpInput>
+                            <Shadow />
+                          </bumpInput>
+                          <light>
+                            <javafx.scene.effect.Light.Distant />
+                          </light>
+                        </Lighting>
+                      </effect>
+                    </TextField>
+                  </children>
+                </HBox>
+              </graphic>
+            </Button>
           </children>
         </HBox>
       </bottom>
@@ -26,7 +71,18 @@
           <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
               <children>
-                <ListView fx:id="listView" prefHeight="336.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <ListView fx:id="listView" blendMode="GREEN" prefHeight="336.0" prefWidth="196.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <effect>
+                    <Lighting diffuseConstant="2.0" specularConstant="2.0" specularExponent="17.460317460317462" surfaceScale="0.0">
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant />
+                      </light>
+                    </Lighting>
+                  </effect>
+                </ListView>
               </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">

@@ -16,11 +16,4 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>javaFx</groupId>
-            <artifactId>javaFx</artifactId>
-            <version>1</version>
-        </dependency>
-    </dependencies>
 </project>
