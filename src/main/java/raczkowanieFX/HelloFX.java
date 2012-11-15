@@ -3,9 +3,11 @@ package raczkowanieFX;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Group;
+import javafx.scene.GroupBuilder;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.ImageViewBuilder;
 
 public class HelloFX extends Application{
 	
@@ -24,16 +26,21 @@ public class HelloFX extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		Group root = new Group();
-		String imageSource = "http://www.alemiodzio.pl/darmowe_tapety_na_pulpit,smieszne,2,1,smieszne008,26,1,0.html"; 
+		String imageSource = "http://www.alemiodzio.pl/vardata/galeria/10000002/n_smieszne008.jpg"; 
 
-		Image image = new Image(imageSource);
-		ImageView imageview = new ImageView();
-		root.getChildren().add(imageview);
+        ImageView imageView = ImageViewBuilder.create()
+                .image(new Image(imageSource))
+                .build();
+         
+        Group myGroup = GroupBuilder.create()
+                .children(imageView)
+                .build();
+         
+        root.getChildren().add(myGroup);
 
-		Scene scene = new Scene(root);
+        primaryStage.setScene(new Scene(root, 500, 312));
 		primaryStage.setTitle("Moja pogoñ za Jav¹ :p");
-		primaryStage.show();
-		
+        primaryStage.show();
+			
 	}
-
 }
